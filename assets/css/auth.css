@@ -1,0 +1,159 @@
+/* Auth Page Styles */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap');
+
+:root {
+    --primary: #2c7da0;               /* Trustworthy blue */
+    --primary-dark: #225d78;         /* Darker shade for hover */
+    --secondary: #f4a261;            /* Accent yellow-orange */
+    --secondary-dark: #e76f51;       /* Strong orange for urgency */
+    --success: #2ecc71;
+    --danger: #e74c3c;
+    --light: #ecf0f1;
+    --dark: #1d2348;                 /* Deep navy for headings/nav */
+    --text: #1d2348;                 /* Consistent strong text contrast */
+    --border: #bdc3c7;
+    --background: #fffaef;           /* Soft off-white background */
+    --shadow: rgba(0, 0, 0, 0.1);
+    --radius: 8px;
+    --font-main: 'Open Sans', sans-serif; /* Body text default */
+    --transition: all 0.3s ease;
+}
+
+h1, h2, h3, .btn-primary, .auth-link a {
+    font-family: 'Nunito', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--background);
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233498db' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.auth-box {
+    background-color: white;
+    border-radius: var(--radius);
+    box-shadow: 0 5px 20px var(--shadow);
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.logo {
+    margin-bottom: 1.5rem;
+    max-height: 120px;
+}
+
+.logo img {
+    width: 100%;              /* Fill the container width */
+    max-width: 300px;         /* Limit the max size */
+    height: auto;             /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.auth-link {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.auth-link a {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.auth-link a:hover {
+    color: var(--primary-dark);
+}
+
+.error-message,
+.success-message {
+    padding: 1rem;
+    border-radius: var(--radius);
+    margin-bottom: 1.5rem;
+}
+
+.error-message {
+    background-color: #fadbd8;
+    border-left: 4px solid var(--danger);
+    color: #943126;
+    text-align: left;
+}
+
+.success-message {
+    background-color: #d5f5e3;
+    border-left: 4px solid var(--success);
+    color: #196f3d;
+    text-align: left;
+}
